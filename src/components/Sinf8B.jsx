@@ -1,11 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./MainMenu.css";
 
 function Sinf8B() {
+  const navigate = useNavigate();
+
   return (
     <div className="main-menu">
       <header className="main-header">
-        <button className="back-button" onClick={() => window.location.href = "/"}>
+        <button className="back-button" onClick={() => navigate("/")}>
           ← Asosiy menyuga qaytish
         </button>
 
@@ -42,14 +45,14 @@ function Sinf8B() {
                 finalgacha kurashadi.
               </p>
 
-              <button onClick={() => window.location.href = "/chempionat"}>
+              <button onClick={() => navigate("/chempionat")}>
                 Chempionatni boshlash →
               </button>
             </div>
           </div>
 
-          {/* OLMA BOG'I O'YINI (TEZ ORADA) */}
-          <div className="game-card disabled">
+          {/* OLMA BOG'I O'YINI (AKTIV) */}
+          <div className="game-card championship">
             <div className="game-icon">
               🍎
             </div>
@@ -58,16 +61,23 @@ function Sinf8B() {
               <h2>Olma bog‘i</h2>
 
               <p>
-                Matematik topshiriqlarni bajarib, olma bog‘idan
-                hosil yig‘ish o‘yin rejimi.
+                O‘quvchilar 2 guruhga bo‘linib, 30 ta olmali bog‘dan
+                ball yig‘ish bo‘yicha bellashadilar.
               </p>
 
-              <button disabled>
-                Tez orada
+              <button onClick={() => navigate("/olma-bogi")}>
+                Olma bog‘iga kirish →
               </button>
             </div>
           </div>
 
+        </div>
+
+        {/* ASOSIY MENYUGA QAYTISH TUGMASI (PASTDAGI) */}
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
+          <button className="back-to-main-btn" onClick={() => navigate("/")}>
+            🏠 Asosiy Menyuga Qaytish
+          </button>
         </div>
       </main>
 
