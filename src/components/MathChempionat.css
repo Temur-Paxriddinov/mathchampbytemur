@@ -1,0 +1,608 @@
+/* ==========================================
+   HAVORANG VA OQ MO'TADIL SODDA STIL (MATHCHAMP)
+   ========================================== */
+
+.championship-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  padding-bottom: 40px;
+}
+
+.championship-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.championship-logo {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.championship-logo span {
+  color: #7dd3fc;
+}
+
+.championship-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.championship-title h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.championship-title p {
+  color: #e0f2fe;
+  font-size: 16px;
+}
+
+.setup-card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.setup-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.setup-card-header h2 {
+  font-size: 20px;
+  margin: 0 0 4px 0;
+}
+
+.setup-card-header p {
+  margin: 0;
+  color: #bae6fd;
+  font-size: 14px;
+}
+
+.player-count {
+  background: #ffffff;
+  color: #0284c7;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.players-textarea {
+  width: 100%;
+  height: 140px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #0f172a;
+  outline: none;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.players-textarea:focus {
+  border-color: #38bdf8;
+}
+
+.time-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-box input {
+  width: 80px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.start-button {
+  width: 100%;
+  margin-top: 32px;
+  background: #ffffff;
+  color: #0284c7;
+  border: none;
+  padding: 18px;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  background: #f0f9ff;
+}
+
+/* TURNIR BRACKET (SETKA) HASILOTI */
+.live-draw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+}
+
+.tournament-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.tournament-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.tournament-stats div {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.tournament-stats strong {
+  display: block;
+  font-size: 20px;
+}
+
+.tournament-stats span {
+  font-size: 11px;
+  color: #bae6fd;
+  letter-spacing: 1px;
+}
+
+.bracket-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  overflow-x: auto;
+}
+
+.sky-bracket-grid {
+  display: flex;
+  gap: 30px;
+  min-width: max-content;
+}
+
+.sky-round-column {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.round-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
+.round-num {
+  background: #ffffff;
+  color: #0284c7;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.sky-matches-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  gap: 20px;
+}
+
+.sky-match-box {
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.sky-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  background: #f8fafc;
+}
+
+.sky-player.is-winner {
+  background: #e0f2fe;
+  color: #0284c7;
+  font-weight: 800;
+}
+
+.sky-divider {
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.play-match-btn {
+  margin-top: 6px;
+  background: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.play-match-btn:hover {
+  background: #0369a1;
+}
+
+/* ==========================================
+   O'YIN ARENASI (MAIN UCL GAME) STILLARI
+   ========================================== */
+
+.match-arena-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.arena-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.timer-badge {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.question-box {
+  flex: 1;
+  background: #ffffff;
+  color: #0284c7;
+  padding: 16px 24px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.question-box h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.cancel-match-btn {
+  background: rgba(239, 68, 68, 0.8);
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.split-screen-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  flex: 1;
+}
+
+.player-side {
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+}
+
+.player-side.locked {
+  opacity: 0.8;
+}
+
+.player-card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.player-card-header span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #bae6fd;
+}
+
+.player-card-header h3 {
+  font-size: 28px;
+  margin: 4px 0 0 0;
+}
+
+.status-badge {
+  margin-top: 8px;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  background: #ffffff;
+  color: #0284c7;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.option-btn {
+  background: #ffffff;
+  color: #0284c7;
+  border: 2px solid transparent;
+  padding: 18px 12px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.option-btn:hover:not(:disabled) {
+  transform: scale(1.02);
+  background: #f0f9ff;
+}
+
+.opt-letter {
+  color: #0369a1;
+  margin-right: 6px;
+}
+
+/* 1.5s COOLDOWN VA RANG LARI (YASHIL / QIZIL) */
+
+.cooldown-banner {
+  background: rgba(234, 179, 8, 0.25);
+  border: 2px solid #facc15;
+  color: #fef08a;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+}
+
+.cooldown-banner h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* ORATADA BANNER (O'YIN NATIJASI) */
+.ucl-victory-banner-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  color: #0284c7;
+  border: 3px solid #0284c7;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 24px 40px;
+  text-align: center;
+  z-index: 9999;
+}
+
+.ucl-star-badge {
+  display: inline-block;
+  background: #0284c7;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.ucl-victory-banner-center h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0284c7;
+}
+
+.ucl-winner-box {
+  background: #ffffff;
+  color: #0284c7;
+  border-radius: 20px;
+  padding: 30px 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.ucl-mini-title {
+  color: #0284c7;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* To'g'ri va xato variantlar */
+button.option-btn.correct-option,
+button.option-btn.correct-option:disabled {
+  background-color: #22c55e !important;
+  color: #ffffff !important;
+  border: 3px solid #ffffff !important;
+  opacity: 1 !important;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.9) !important;
+  transform: scale(1.04);
+}
+
+button.option-btn.wrong-option,
+button.option-btn.wrong-option:disabled {
+  background-color: #ef4444 !important;
+  color: #ffffff !important;
+  border: 3px solid #ffffff !important;
+  opacity: 1 !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.9) !important;
+}
+
+/* CHEMPIONLIK EKRANI */
+.champion-screen-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, #0284c7 0%, #0369a1 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.confetti-box {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.champion-card {
+  background: rgba(255, 255, 255, 0.2);
+  border: 4px solid #ffffff;
+  border-radius: 28px;
+  padding: 40px 60px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+}
+
+.trophy-icon {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+.champion-subtitle {
+  color: #fef08a;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.champion-name {
+  font-size: 48px;
+  color: #ffffff;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.champion-congrats {
+  color: #e0f2fe;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.restart-btn {
+  background: #ffffff;
+  color: #0284c7;
+  border: none;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.restart-btn:hover {
+  transform: scale(1.05);
+  background: #f0f9ff;
+}
+
+.final-tag {
+  color: #eab308;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 4px;
+}
